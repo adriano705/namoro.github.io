@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <title>namorados</title>
+
+    <style>
+        body{
+            background-color: red;
+
+        }
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        #sim{
+            height: 30px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 6px;
+            color: white;
+            margin-left: -85px;
+        }
+
+        #nao{
+            position: absolute;
+            height: 30px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 6px;
+            color: white;
+            margin-left: 30px;
+
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <div class="painel">
+        <h2> Oi cabeçao quer namorar comigo? kkk</h2>
+
+        <img src="https://www.whoa.in/download/funny-gif-memes-gif-laughing-gif-trending-gif-for-fun-5-memes-gif" alt="">
+
+        <h2> Aceita namorar comigo </h2>
+
+
+        <a href="https://youtu.be/0mJMW2CzTiA?si=YSdO4Zv_bB9Zk2-T"><button id="sim"> Sim! </button></a>
+        <button onmouseover="fuja()" id="nao"> Nao! </button>
+        
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+        
+        }
+    </script>
+
+    
+   
+</body>
+
+</html>
